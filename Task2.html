@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Add User</title>
+		<style>
+			html {
+				font-family: "arial";
+			}
+
+			button {
+				font-size: 18px;
+				border-radius: 5px;
+				padding: 8px 6.5px 8px 6.5px;
+				box-shadow: none;
+			    border-color: transparent;
+			}
+
+			.heading {
+				background-color: #F0F0F0;
+				padding: 10px 0px 15px 10px;
+			}
+
+			.input_field_heading {
+				display: inline-flex;
+				height: 30px;
+			}
+
+			.input_fields {
+				padding: 8px; 
+				margin: 5px;
+				width: 400px;
+				border-radius: 5px;
+				border-color: #F0F0F0;
+			}
+
+			.input_field_divs {
+				margin: 0px 15px 15px 15px
+			}
+
+			.asterisk_color {
+				color: red;
+			}
+
+			.switch {
+				position: relative;
+				display: inline-block;
+				width: 60px;
+				height: 34px;
+			}
+
+			.switch input {
+				opacity: 0;
+				width: 0;
+				height: 0;
+			}
+
+			.slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #ccc;
+			}
+
+			.slider:before {
+				position: absolute;
+				content: "";
+				height: 26px;
+				width: 26px;
+				left: 4px;
+				bottom: 4px;
+				background-color: white;
+			}
+
+			input:checked + .slider {
+				  background-color: crimson;
+			}
+
+			input:checked + .slider:before {
+				-webkit-transform: translateX(26px);
+				-ms-transform: translateX(26px);
+				transform: translateX(26px);
+			}
+
+			.slider.round {
+				  border-radius: 34px;
+			}
+
+			.slider.round:before {
+				  border-radius: 50%;
+			}
+
+			#bottom {
+				margin-top: 50px;
+				float: right;
+			}
+
+			#cancel {
+				background-color: #F8F8F8;
+			}
+
+			#cancel:hover {
+			    border: 1px solid #dadce0;                
+			    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+			}
+
+			#confirm {
+				background-color: #488fed;
+				color: white;
+			}
+
+			#confirm:hover {
+				background-color: #4285f4;
+    			box-shadow: 0 0 3px #2c7eea;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "heading">
+			<h1>Add User</h1>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Full Name</h4>
+					</div>
+					<div>
+						<input name = "full_name" type = "text" class = "input_fields">
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Username</h4>
+					</div>
+					<div>
+						<input name = "username" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Password</h4>
+					</div>
+					<div>
+						<input name = "password" type = "text" class = "input_fields">
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Phone Number</h4>
+					</div>
+					<div>
+						<input name = "phone_number" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Send Email</h4>
+					</div>
+					<div style = "padding-right: 369px; margin-top: 7px">
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Email</h4>
+					</div>
+					<div>
+						<input name = "email" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h4>Address</h4>
+					</div>
+					<div>
+						<input name = "address" type = "text" class = "input_fields">
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h4>Contacts</h4>
+					</div>
+					<div>
+						<input name = "contact" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>validPeriod</h4>
+					</div>
+					<div>
+						<input name = "valid_period" type = "date" class = "input_fields">
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>AppId</h4>
+					</div>
+					<div>
+						<input name = "app_id" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style = "display: inline-flex;">
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h6 class = "asterisk_color">*</h6><h4>Capacity(M)</h4>
+					</div>
+					<div>
+						<input name = "capacity" type = "text" class = "input_fields">
+					</div>
+				</div>
+				<div class = "input_field_divs">
+					<div class = "input_field_heading">
+						<h4>Postscript</h4>
+					</div>
+					<div>
+						<input name = "app_id" type = "text" class = "input_fields">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h5 style = "height: 25px; margin: 15px 0px 7px 0px">Whether to authorize the background</h5>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<div id = "bottom">
+			<button id = "cancel">Cancel</button>
+			<button id = "confirm">Confirm</button>
+		</div>
+	</body>
+</html>
