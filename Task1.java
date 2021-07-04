@@ -10,11 +10,11 @@ public class Task1 {
         for (int i = 0; i < stringQuestions.length; i++)
         {
             System.out.println("Enter your " + stringQuestions[i]);
-            stringResponses.add(sc.nextLine());
+            stringResponses.add(stringQuestions[i] + ": " + sc.nextLine());
         }
 
         System.out.println("Would you like to receive emails? (Enter a yes or a no) ");
-        stringResponses.add(sc.next().equals("yes")? "true": "false");
+        stringResponses.add("Send Emails: " + (sc.next().equals("yes")? "true": "false"));
 
         for(int i = 0; i<2; i++)
         {
@@ -30,7 +30,7 @@ public class Task1 {
             date+=sc.next() + "/";
             System.out.println("Enter year");
             date+=sc.next();
-            stringResponses.add(date);
+            stringResponses.add((i==0? "Valid From: ": "Valid Till: ") + date);
         }
         System.out.println(stringResponses);
     }
